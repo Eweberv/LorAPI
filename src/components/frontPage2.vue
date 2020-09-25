@@ -28,7 +28,6 @@ export default {
   },
   data: function() {
     return {
-      riotApiKey: "c8b45529-62d7-4503-bf0d-cb8da998dcaf",
       globalInfo: globalInfo
     }
   }

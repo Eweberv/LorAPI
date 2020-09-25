@@ -41,8 +41,6 @@
         </p>
       </div>
     </div>
-
-    <router-link to="/page2">Go to page 2</router-link>
   </div>
 </template>
 
@@ -60,6 +58,7 @@ export default {
       riotApiKey: "c8b45529-62d7-4503-bf0d-cb8da998dcaf",
       globalInfo: globalInfo,
       activeComponent: null,
+      lastActiveComponant: null
     }
   },
   methods: {
@@ -67,7 +66,8 @@ export default {
       console.log(elem);
     },
     swichActiveComponent(newComponent) {
-      this.activeComponent = newComponent;
+      this.lastActiveComponant = this.activeComponent;
+      this.lastActiveComponant === newComponent ? this.activeComponent = null : this.activeComponent = newComponent
     },
   }
 }

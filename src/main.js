@@ -4,8 +4,14 @@ import VueRouter from 'vue-router'
 import vuetify from './plugins/vuetify';
 import frontPage from "@/components/frontPage";
 import frontPage2 from "@/components/frontPage2";
+import VueNotification from "@kugatsu/vuenotification";
+
 
 Vue.use(VueRouter)
+Vue.use(VueNotification, {
+  timer: 4
+});
+
 Vue.config.productionTip = false
 
 const routes = [
